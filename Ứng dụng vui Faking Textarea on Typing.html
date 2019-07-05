@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<h1> Type anthing slowly </h1>
+<textarea id="input" style="height: 400px; width: 500px" placeholder="Mời bạn nhập"></textarea>
+
+<script>
+    let input = document.getElementById('input');
+    let arr = ['B', 'ạ', 'n', ' ', 'l', 'à', ' ', 'đ', 'ồ', ' ', 'n', 'g', 'ố', 'c', ' ', '!','!','!'];
+    let check = 0;
+    let luuTru = "";
+    input.addEventListener('keyup', function () {
+        luuTru += arr[check];
+        document.getElementById('input').value = luuTru;
+        check++;
+
+        if (check == arr.length - 1) {
+            check = 0;
+            luuTru = ' ';
+        }
+    });
+
+</script>
+</body>
+</html>
+
